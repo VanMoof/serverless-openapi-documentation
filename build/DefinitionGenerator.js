@@ -95,7 +95,7 @@ class DefinitionGenerator {
      */
     getOperationFromConfig(funcName, documentationConfig) {
         const operationObj = {
-            operationId: funcName
+            operationId: documentationConfig.operationId || funcName
         };
         if (documentationConfig.summary) {
             operationObj.summary = documentationConfig.summary;
